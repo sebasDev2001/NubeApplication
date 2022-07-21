@@ -32,7 +32,7 @@ async function randomProductDao() {
     return rows;
 }
 
-*/
+
 
 async function getAllProductsDao() {
     const [data, setData] = useState([])
@@ -46,3 +46,5 @@ function getRandomInt(max) {
 }
 
 export default {getAllProductsDao}
+
+*/
