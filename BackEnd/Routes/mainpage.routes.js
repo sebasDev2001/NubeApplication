@@ -8,7 +8,7 @@ import App from '../../src/App';
 const mainPageRouter = Router();
 
 mainPageRouter.get('/', (req, res) => {
-    fs.readFile(path.resolve('../../build/index.html'), 'utf-8', (err, data) => {
+    fs.readFile(path.resolve('../build/index.html'), 'utf-8', (err, data) => {
         if (err) {
             console.log(err);
             return res.status(500).send('Error loading main page');

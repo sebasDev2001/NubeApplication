@@ -7,11 +7,7 @@ export default function MainPage (){
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await axios.get("ec2-18-208-127-192.compute-1.amazonaws.com:5000/products", {
-			headers: {'Access-Control-Allow-Origin': '*',}})
-		.then((response) => {
-			console.log(response);
-		})
+            const result = await axios.get("localhost:5000/products");
             setProducts(result.data);
         }
         fetchData();
