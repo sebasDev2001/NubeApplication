@@ -4,16 +4,15 @@ import axios from "axios";
 export default function MainPage (){
 
     const [products, setProducts] = useState([]);
-
+//ec2-18-208-127-192.compute-1.amazonaws.com:5000/products
     useEffect(() => {
         const fetchData = async () => {
-            const result = await axios.get("ec2-18-208-127-192.compute-1.amazonaws.com:5000/products", {
+            const result = await axios.get("http://localhost:5000"+"/products", {
 			headers: {'Access-Control-Allow-Origin': '*',}})
 		.then((response) => {
 			console.log(response);
-		})
-            setProducts(result.data);
-        }
+            setProducts(response.data);
+		})}
         fetchData();
     }, []);
     

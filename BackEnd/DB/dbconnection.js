@@ -2,7 +2,7 @@ import mysql from 'mysql2';
 
 //buenas
 const pool = mysql.createPool({
-    host: process.env.MYSQL_HOST || '3.83.110.245',
+    host: process.env.MYSQL_HOST || '54.173.112.18',
     user: process.env.MYSQL_USER || 'nube',
     password: process.env.MYSQL_PASSWORD || 'C0mpuNube!',
     database: process.env.MYSQL_DATABASE || 'tienda',
