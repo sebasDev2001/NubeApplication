@@ -7,13 +7,15 @@ import path from 'path';
 import Cors from 'cors';
 
 
+const cors = Cors({origin: '*'});
+
+
 const app = express();
 const port = process.env.PORT || 5000;
-const cors = Cors({ origin: "*"});
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '../Front/views'));
-app.use(cors);
+app.use(Cors());
 app.use(express.static(path.join(__dirname, '../Front/scripts')));
 app.use(express.static(path.resolve(__dirname,'..','build')))
 app.set('port', port);
