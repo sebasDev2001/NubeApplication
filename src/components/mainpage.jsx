@@ -7,23 +7,12 @@ export default function MainPage (){
 //ec2-18-208-127-192.compute-1.amazonaws.com:5000/products
     useEffect(() => {
         const fetchData = async () => {
-       /*    const result = await axios.get("http://localhost:5000/products", {headers: {'Access-Control-Allow-Origin': '*'}})
+            const result = await axios.get("http://localhost:5000"+"/products", {
+			headers: {'Access-Control-Allow-Origin': '*',}})
 		.then((response) => {
 			console.log(response);
             setProducts(response.data);
-		})}*/
-        
-        await fetch('http://localhost:5000/products')
-        .then(response => {
-            response.json().then(data => {
-                console.log(data)
-                setProducts(data);
-            })
-        })
-        
-        console.log(products);
-        }
-        
+		})}
         fetchData();
     }, []);
     

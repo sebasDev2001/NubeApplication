@@ -13,25 +13,17 @@ import os from 'os'
 import fileUpload from 'express-fileupload';
 
 
-const cors = Cors({ origin: '*' });
-
-
-
 const app = express();
-const port = process.env.PORT || 8080;
-app.use(Cors());
-app.set('port', port);
-app.use(express.json());
+const port = process.env.PORT || 5000;
+const cors = Cors({ origin: "*"});
 
-
-
-/*app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '../Front/views'));
-
+app.use(cors);
 app.use(express.static(path.join(__dirname, '../Front/scripts')));
 app.use(express.static(path.resolve(__dirname,'..','build')))
-
-
+app.set('port', port);
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(allProductsRouter)
 
