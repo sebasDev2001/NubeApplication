@@ -42,6 +42,11 @@ body {
   padding: 20px 0 28px 0;
   margin: 0;
 }
+.title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
 
 .product {
   max-width: 650px;
