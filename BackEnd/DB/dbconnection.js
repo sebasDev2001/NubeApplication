@@ -4,8 +4,8 @@ import mysql from 'mysql2';
 const pool = mysql.createPool({
     host: process.env.MYSQL_HOST || 'localhost',
     user: process.env.MYSQL_USER || 'root',
-    password: process.env.MYSQL_PASSWORD || 'gustavo70',
-    database: process.env.MYSQL_DATABASE || 'tienda',
+    password: process.env.MYSQL_PASSWORD || 'pinomario98',
+    database: process.env.MYSQL_DATABASE || 'Cyber',
 });
 
 
